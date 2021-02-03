@@ -22,8 +22,7 @@ const validateCar = require("./middleware.js")
 const MongoDBStore = require("connect-mongo")(session);
 const helmet = require("helmet");
 
-// process.env.DB_URL 
-const dbUrl = "mongodb://localhost:27017/tradesale";
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/tradesale";
 const secret = process.env.SECRET;
 
 mongoose.connect(dbUrl, {
