@@ -1,0 +1,32 @@
+<% layout("layouts/boilerplate") %> 
+<section class="index" id="index">
+<div class="headerimg"></div>
+<section class="searchFormContainer">
+    <form class="searchForm" action="/cars/search" method="POST">
+        <input type="text" placeholder="Make/Model/Year" name="searchQuery">
+        <button>Search</button>
+        </select>
+    </form>
+</section>
+<main class="max-width">
+<h2 class="title">Recently listed</h2>
+<div class="thumbsContainer">
+<% for (let car of cars) { %>
+    <div class="indexThumb">
+        <a href="/cars/<%= car._id %>">
+        <%if(car.images.length) {%>
+        <img class= "thumbnail" src="<%= car.images[0].url %>">
+        <% }else {%>
+        <img class="thumbnail"
+        src="https://spcarsales.co.uk/wp-content/plugins/bk-vehicle/images/awaiting_car_large.gif">
+        <% } %>
+        <hr>
+        <h1><%= car.title %></h1>
+        <p>Mileage: <%= car.mileage %></p>
+        <p>Price: £<%= car.price %></p>
+        <p>Location: <%= car.location %></p>
+    </div></a>
+    <% } %> 
+</div>
+</main>
+</section>

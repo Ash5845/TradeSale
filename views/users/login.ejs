@@ -1,0 +1,18 @@
+<% layout("layouts/boilerplate") %>
+<section class="login" id="login">
+    <div class="headerimg"></div>
+    <div class="max-width">
+        <div class="formContainer">
+            <form action="/login" method="POST" class="loginForm">
+                <H1 class="formHeading">Login</H1>
+                <label for="username" class="label">Username:</label>
+                <input type="username" name="username" id="username" class="field" required>
+                <label for="password" class="label">Password:</label>
+                <input type="password" name="password" id="password" class="field" required>
+                <button class="button">Login</button>
+                <a href="/register">Create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

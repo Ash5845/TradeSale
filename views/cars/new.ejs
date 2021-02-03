@@ -1,0 +1,29 @@
+<% layout("layouts/boilerplate") %>
+<section class="newCar" id="newCar">
+    <div class="headerimg"></div>
+    <div class="max-width">
+        <div class="formContainer">
+            <form action="/cars" method="POST" enctype="multipart/form-data" class="newCarForm">
+                <H1 class="formHeading">Post an advert</H1>
+                <label for="title" class="label">Make:</label>
+                <input type="text" name="car[make]" id="make" class="field" required>
+                <label for="title" class="label">Model:</label>
+                <input type="text" name="car[model]" id="model" class="field" required>
+                <label for="year" class="label">Year:</label>
+                <input type="number" name="car[year]" id="year" class="field" required>
+                <label for="mileage" class="label">Mileage:</label>
+                <input type="number" name="car[mileage]" id="mileage" class="field" required>
+                <label for="location" class="label">Location:</label>
+                <input type="text" name="car[location]" id="location" class="field" placeholder="Town/City" required>
+                <label for="price" class="label">Price:</label>
+                <input type="text" name="car[price]" id="price" class="field" required>
+                <label for="image" class="label">Choose image(s)...</label>
+                <input class="field" type="file" id="image" name="image" multiple>
+                <label for="description" class="label">Description:</label>
+                <textarea rows="10" cols="30" name="car[description]" id="description" class="field" required></textarea>
+                <button class="button">Post ad</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

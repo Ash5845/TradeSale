@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Ubuntu:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.home {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1447&q=80);
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+    color: azure;
+    font-family: 'Ubuntu', sans-serif;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 30px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav h1 {
+    font-size: 40px;
+}
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+.nav-link:hover{
+    color: white;
+    border-bottom-color: #006DCC;
+    cursor: pointer;
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color: #006DCC;
+
+}
+
+.home .mainContent {
+    margin: 200px 0;
+}
+
+.mainContent .text-1 {
+    font-size: 75px;
+    font-weight: 600;
+}
+.mainContent .text-2 {
+    font-size: 40px;
+}
+.mainContent a {
+    display: inline-block;
+    background: #006DCC;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #006DCC;
+    transition: all 0.3s ease;
+}
+.mainContent a:hover {
+    color: #006DCC;
+    background: none;
+}
+
+@media(max-width:623px){
+    .mainContent .text-1 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .mainContent .text-2 {
+        font-size: 25px;
+    }
+    .nav h1 {
+        margin-left: 30px;
+    }
+    .home .mainContent {
+        margin: 100px 0;
+    }
+}
+@media(max-width:425px){
+    .nav-link {
+        margin: 10px;
+        border-bottom: none;
+    }
+}
+
+@media(max-width:368px){
+    .nav-link {
+        margin: 15px;
+        border-bottom: none;
+    }
+    .nav h1 {
+        margin-left: 10px;
+    }
+    .mainContent a {
+        font-size: 20px;
+        padding: 8px 28px;
+    }
+}
+@media(max-width:368px){
+    .nav h1 {
+        font-size: 30px;
+    }
+}

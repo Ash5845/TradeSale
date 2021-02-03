@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Ubuntu:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* index page styling */
+.index .title {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300 ;
+}
+.index .headerimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/porsche-911-header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+}
+.index .searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(48, 47, 47);
+    padding: 25px;
+
+}
+.index .searchForm input {
+    font-family: "Poppins", sans-serif;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    border: 3px #006DCC solid;
+    border-radius: 5px;
+}
+.index .searchForm button {
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 45px;
+    border: 2px solid #006DCC;
+    background: #006DCC;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+.index .searchForm button:hover {
+    background: none;
+    color: #006DCC;
+}
+
+.index .thumbsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.index .thumbsContainer .indexThumb {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    min-width: 200px;
+    max-width: 200px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(105, 103, 103);
+    color: rgb(255, 255, 255);
+}
+.index .thumbsContainer .indexThumb a {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.index .thumbsContainer .indexThumb a:hover {
+    color: #006DCC;
+}
+.index .thumbsContainer .indexThumb .thumbnail {
+    width: 100%;
+    height: 200px;
+}
+
+/* show page styling */
+.show .headerimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/porsche-911-header.jpg');
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.show .showContainer {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-around;
+}
+.showContainer .showLeft {
+    width: 55%;
+    order: 1;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.show .showLeft .showImg {
+    max-width: 600px;
+    max-height: 600px;
+}
+.showContainer .showRight {
+    width: 45%;
+    order: 2;
+    border: 2px #006DCC solid;
+    border-radius: 6px;
+    /* display: inline-block; */
+}
+.showContainer .showRight .text {
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.showContainer .showRight .text hr {
+    border: 1px solid #006DCC
+}
+.showContainer .showRight .emailBtn {
+    padding: 3px 8px;
+    border: 2px solid #006DCC;
+    background: #006DCC;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+} 
+.show .buttons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.show .deleteButton {
+    height: 40px;
+    width: 100px;
+    margin: 10px;
+}
+.show .deleteButton button {
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    border: 2px solid red;
+    background: red;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.show .deleteButton button:hover {
+    color: red;
+    background: none;
+}
+.show .editButton {
+    height: 40px;
+    width: 100px;
+    margin-top: 17px;
+}
+.show .editButton a {
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    border: 2px solid orangered;
+    background: orangered;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.show .editButton a:hover {
+    color: orangered;
+    background: none;
+}
+
+/* new car form page styling */
+.newCar .headerimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/porsche-911-header.jpg');
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.newCar .formContainer {
+    display: flex;
+}
+.formContainer .newCarForm{
+    margin: 60px auto;
+    max-width: 400px;
+    border: 2px solid #39a9db;
+    border-radius: 6px;
+    padding: 10px
+}
+.formContainer .newCarForm .formHeading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.formContainer .newCarForm .field {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.formContainer .newCarForm .field:valid{
+    border: 2px solid #00ff00;
+    border-radius: 6px;
+}
+.formContainer .newCarForm .field:invalid{
+    border: 2px solid orange;
+    border-radius: 6px;
+}
+.newCar .formContainer .newCarForm textarea {
+    resize: none;
+    height: 100px;
+    width: 100%;
+} 
+.formContainer .newCarForm .label {
+    font-family: 'Poppins', sans-serif;
+}
+.formContainer .newCarForm .button {
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #006DCC;
+    background: #006DCC;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.formContainer .newCarForm button:hover{
+    color: #006DCC;
+    background: none;
+}
+
+/* registration page styling */
+.register .headerimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/porsche-911-header.jpg');
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.register .formContainer {
+    display: flex;
+}
+.formContainer .registerForm{
+    margin: 60px auto;
+    max-width: 400px;
+    border: 2px solid #39a9db;
+    border-radius: 6px;
+    padding: 10px
+}
+.formContainer .registerForm .formHeading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.formContainer .registerForm .field {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.formContainer .registerForm .label {
+    font-family: 'Poppins', sans-serif;
+}
+.formContainer .registerForm .field:valid{
+    border: 2px solid #00ff00;
+    border-radius: 6px;
+}
+.formContainer .registerForm .field:invalid{
+    border: 2px solid orange;
+    border-radius: 6px;
+}
+.formContainer .registerForm .button {
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #006DCC;
+    background: #006DCC;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.formContainer .registerForm button:hover{
+    color: #006DCC;
+    background: none;
+}
+
+/* login page styling */
+.login .headerimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/porsche-911-header.jpg');
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login .formContainer {
+    display: flex;
+}
+.formContainer .loginForm{
+    margin: 60px auto;
+    max-width: 400px;
+    border: 2px solid #39a9db;
+    border-radius: 6px;
+    padding: 10px
+}
+.formContainer .loginForm .formHeading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.formContainer .loginForm .field {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.formContainer .loginForm .field:valid{
+    border: 2px solid #00ff00;
+    border-radius: 6px;
+}
+.formContainer .loginForm .field:invalid{
+    border: 2px solid orange;
+    border-radius: 6px;
+}
+.formContainer .loginForm .label {
+    font-family: 'Poppins', sans-serif;
+}
+.formContainer .loginForm a {
+    font-family: 'Poppins', sans-serif;
+    color: #006DCC;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+.formContainer .loginForm .button {
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #006DCC;
+    background: #006DCC;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.formContainer .loginForm button:hover{
+    color: #006DCC;
+    background: none;
+}
+
+/* error page styling */
+.errorPage .headerimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/porsche-911-header.jpg');
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.errorPage .errorMessage {
+    background: palevioletred;
+    color: #fff;
+    border-radius: 6px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.errorPage .errorMessage .alert-heading {
+    font-size: 30px;
+}
+
+/* footer styling */
+.footer {
+    background: #222;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 23px;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+}
+.footer span a {
+    color: #39a9db;
+}
+.footer span a:hover {
+    text-decoration: underline;
+}
+
+/* flash banner styling */
+/* The alert message box */
+.flash {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 100px;
+    width: 50%;
+    text-align: center;
+
+}
+.flash.scroll{
+    display: none
+
+}
+.errorAlert {
+    padding: 20px;
+    background-color: #d9534f;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 0 6px 6px 0;
+  }
+.successAlert {
+    padding: 20px;
+    background-color: #5cb85c;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 0 6px 6px 0;
+}
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+
+/* map */
+.show #map {
+    width: 100%;
+    height: 300px;
+    margin: 10px 0;
+}
+
+/* loader */
+.loader {
+    animation: spin 1s infinite linear;
+    border: solid 2vmin transparent;
+    border-radius: 50%;
+    border-right-color: #09f;
+    border-top-color: #09f;
+    box-sizing: border-box;
+    height: 20vmin;
+    left: calc(50% - 10vmin);
+    position: fixed;
+    top: calc(50% - 10vmin);
+    width: 20vmin;
+    z-index: 1;
+  }
+  .loader:before {
+    animation: spin 2s infinite linear;
+    border: solid 2vmin transparent;
+    border-radius: 50%;
+    border-right-color: #3cf;
+    border-top-color: #3cf;
+    box-sizing: border-box;
+    content: "";
+    height: 16vmin;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16vmin;
+  }
+  .loader:after {
+    animation: spin 3s infinite linear;
+    border: solid 2vmin transparent;
+    border-radius: 50%;
+    border-right-color: #6ff;
+    border-top-color: #6ff;
+    box-sizing: border-box;
+    content: "";
+    height: 12vmin;
+    left: 2vmin;
+    position: absolute;
+    top: 2vmin;
+    width: 12vmin;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.loader.active {
+    display: none;
+}
+/* responsive media queries */
+
+@media(max-width:868px){
+    .show .showContainer{
+        flex-wrap: wrap;
+    }
+    .showContainer .showLeft{
+        width: 100%;
+    }
+    .showContainer .showRight{
+        width: 100%;
+    }
+    .showContainer .showLeft{
+        margin-bottom: 100px;
+    }
+}
+@media(max-width:600px){
+    .show .showContainer{
+        font-size: 15px;
+    }
+}
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeSale</title>
+    <script src="https://kit.fontawesome.com/812281facd.js"></script>
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="loader"></div>
+   <%- include("../partials/navbar") %>
+   <%- include("../partials/flash") %>
+   <%- body %>
+   <footer class="footer">
+        <span>Created By <a href="www.ashadur.com">Ashadur Rahman</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+   </footer>
+<script src="/javascripts/navbarScript.js"></script>
+<script src="/javascripts/loader.js"></script>
+</body>
+</html>

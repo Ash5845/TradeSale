@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/home.css" rel="stylesheet"/>
+    <title>TradeSale</title>
+</head>
+<body class="home">
+<div class="max-width">
+    <header class="nav">
+    <h1>TradeSale</h1>
+    <div class="navlinks">
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="/cars">View ads</a>
+        <a class="nav-link" href="/cars/new">Post an ad</a>
+        <% if(!currentUser) { %>
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/register">Register</a>
+        <% } %> 
+    </div>
+    </header>
+    <main class="mainContent">
+        <div class="text-1">Welcome to TradeSale</div>
+        <div class="text-2">The marketplace for B2B car sales</div>
+        <a href="/cars">View ads</a>
+    </main>
+</div>
+</body>
+</html>

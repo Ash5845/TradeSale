@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="max-width">
+    <div class="logo">
+      <a href="/">TradeSale</a>
+    </div>
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/cars">View ads</a></li>
+      <li><a href="/cars/new">Post an ad</a></li>
+      <% if(!currentUser) { %> 
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <% }else { %>
+      <li><a href="/cars/myads">My ads</a></li>
+      <li><a href="/logout">Logout</a></li>
+      <% } %>  
+    </ul>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,38 @@
+<% layout("layouts/boilerplate") %>
+<section class="newCar" id="editCar">
+    <div class="headerimg"></div>
+    <div class="max-width">
+        <div class="formContainer">
+            <form action="/cars/<%=car._id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="newCarForm">
+                <H1 class="formHeading">Edit advert</H1>
+                <label for="title" class="label">Make:</label>
+                <input type="text" name="car[make]" id="make" class="field" value="<%=car.make%>" required>
+                <label for="title" class="label">Model:</label>
+                <input type="text" name="car[model]" id="model" class="field" value="<%=car.model%>" required>
+                <label for="year" class="label">Year:</label>
+                <input type="number" name="car[year]" id="year" class="field" value="<%=car.year%>" required>
+                <label for="mileage" class="label">Mileage:</label>
+                <input type="number" name="car[mileage]" id="mileage" class="field" value="<%=car.mileage%>" required>
+                <label for="location" class="label">Location:</label>
+                <input type="text" name="car[location]" id="location" class="field" value="<%=car.location%>" required>
+                <label for="price" class="label">Price:</label>
+                <input type="text" name="car[price]" id="price" class="field" value="<%=car.price%>" required>
+                <label for="image" class="form-label">Add more image(s)...</label>
+                <input class="form-control" type="file" id="image" name="image" multiple>
+                <div class="mb-3">
+                <% car.images.forEach(function(img, i) {  %>
+                <img src="<%=img.thumbnail %>" class="thumbnail">
+                <div>
+                <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                <label for="image-<%=i%>">Delete?</label>
+                </div>
+                <% })%>
+                </div>
+                <label for="description" class="label">Description:</label>
+                <textarea rows="10" cols="30" name="car[description]" id="description" class="field" required><%=car.description%></textarea>
+                <button class="button">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

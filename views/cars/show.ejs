@@ -1,0 +1,61 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/stylesheets/flickity.css" media="screen">
+<section class="show">
+  <div class="headerimg"></div>
+  <div class="max-width">
+    <div class="showContainer">
+      <div class="showRight">
+        <div class="text">
+          <h2><%= car.title %></h2>
+          <p><strong>£<%= car.price %></strong></p>
+          <p><strong>Location:</strong> <%= car.location %></p>
+          <p><strong>Date Posted:</strong> <%= car.date %></p>
+          <hr />
+          <h2>Description</h2>
+          <p><%= car.description %></p>
+          <hr />
+        </div>
+        <% if(currentUser && car.author.equals(currentUser._id)) { %>
+        <div class="buttons">
+          <div class="deleteButton">
+            <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+              <button>Delete</button>
+            </form>
+          </div>
+          <div class="editButton">
+            <a href="/cars/<%=car._id%>/edit">Edit</a>
+          </div>
+        </div>
+        <% }else { %>
+          <div class="text">
+          <p><strong>Posted by:</strong> <%= user.username %></p>
+          <p><strong>Contact seller:</strong> <a class="emailBtn" href="mailto: <%= user.email %>?subject=<%= car.title %>"  target="_blank">Send Email</a></p>
+          </div>
+          <% } %> 
+      </div>
+      <div class="showLeft">
+        <!-- slideshow -->
+        <div class="carousel"
+        data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+        <% if(car.images.length) { %>  
+        <% car.images.forEach((img, i) => { %> 
+        <img src="<%= img.url %>"/>
+        <% }) %> 
+        <% } else { %>  
+          <img src="/images/missing-large.jpg"/>
+          <img src="/images/missing-large.jpg"/>
+          <img src="/images/missing-large.jpg"/>
+        <% } %> 
+        </div>
+        </div>
+      </div>
+      <div id='map'></div>
+    </div>
+  </div>
+</section>
+<script src="/javascripts/flickity.pkgd.min.js"></script>
+<script>
+const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+const car = <%- JSON.stringify(car) %>;
+</script>
+<script src="/javascripts/showPageMap.js"></script>

@@ -1,0 +1,19 @@
+
+<% if(success && success.length) { %> 
+  <section class="flash">
+  <div class="successAlert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <%= success %>
+  </div>
+  </section>
+  <% }  %> 
+
+<% if(error && error.length) { %> 
+  <section class="flash">
+  <div class="errorAlert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <%= error %>
+  </div>
+  </section>
+  <% }  %> 
+<script src="/javascripts/flashScript.js"></script>
