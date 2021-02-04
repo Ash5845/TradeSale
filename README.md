@@ -11,7 +11,7 @@ The webapp features full CRUD operation and user authentication, which allows us
 
 ## **Demo**
 ---
-Here is a working live demo: 
+Here is a working live demo: https://tradesales.herokuapp.com/
 
 ### **Site**
 ---
